@@ -36,7 +36,7 @@ I believe in creating interfaces that feel intuitive and accessible to all users
   location: 'Vadodara, Gujarat, India',
   email: 'vrajamin45@gmail.com',
   phone: '+91 96870 19705',
-  availability: 'Open to internships and freelance opportunities',
+  availability: 'Open to internships and professional opportunities aligned with organization',
   socialLinks: {
     linkedin: 'https://linkedin.com/in/vraj-amin',
     github: 'https://github.com/vraj-amin',
