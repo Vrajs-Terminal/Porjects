@@ -20,11 +20,23 @@ export default function Home() {
       <SEOHead />
       
       <div className="min-h-screen">
-        {/* Hero Section - Full viewport with gradient background */}
-        <section className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {/* Animated background pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]" />
+        {/* Hero Section - Full viewport with video background */}
+        <section className="relative h-screen w-full overflow-hidden">
+          {/* Background Video */}
+          <div className="absolute inset-0">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="https://images.pexels.com/videos/3129671/free-video-3129671.jpg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200"
+              className="w-full h-full object-cover"
+            >
+              <source src="https://videos.pexels.com/video-files/3129671/3129671-sd_960_540_25fps.mp4" type="video/mp4" />
+            </video>
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
           </div>
 
           {/* Hero Content */}
