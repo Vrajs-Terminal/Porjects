@@ -20,31 +20,11 @@ export default function Home() {
       <SEOHead />
       
       <div className="min-h-screen">
-        {/* Hero Section - Full viewport with video background + purple theme */}
-        <section className="relative h-screen w-full overflow-hidden">
-          {/* Background Video - Laptop/Coding workspace */}
-          <div className="absolute inset-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="https://images.pexels.com/videos/5483077/free-video-5483077.jpg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200"
-              className="w-full h-full object-cover scale-105"
-              style={{ filter: 'brightness(0.7) saturate(1.2)' }}
-            >
-              <source src="https://videos.pexels.com/video-files/5483077/5483077-sd_960_540_25fps.mp4" type="video/mp4" />
-            </video>
-            {/* Purple gradient overlay for theme consistency */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-slate-900/70 to-purple-950/80" />
-            {/* Additional smooth gradient for depth */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-purple-900/40" />
-            {/* Subtle animated glow effect */}
-            <div className="absolute inset-0 opacity-30">
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl animate-pulse" />
-              <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-            </div>
+        {/* Hero Section - Full viewport with gradient background */}
+        <section className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          {/* Animated background pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]" />
           </div>
 
           {/* Hero Content */}
@@ -100,14 +80,14 @@ export default function Home() {
               >
                 <Link
                   to="/portfolio"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-purple-500 text-white rounded-sm font-light tracking-wide hover:bg-purple-400 transition-all duration-300 shadow-lg shadow-purple-500/25"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-slate-900 rounded-sm font-light tracking-wide hover:bg-white/90 transition-colors"
                 >
                   View Projects
                   <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-purple-400/40 text-white rounded-sm font-light tracking-wide hover:bg-purple-500/20 hover:border-purple-400/60 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-white/30 text-white rounded-sm font-light tracking-wide hover:bg-white/10 transition-colors"
                 >
                   Get in Touch
                 </Link>
@@ -126,8 +106,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills Section - Purple themed */}
-        <section className="py-24 md:py-32 px-6 lg:px-8 bg-gradient-to-b from-background via-purple-950/10 to-background">
+        {/* Skills Section */}
+        <section className="py-24 md:py-32 px-6 lg:px-8 bg-background">
           <div className="max-w-6xl mx-auto">
             <ScrollReveal>
               <div className="text-center space-y-4 mb-16">
@@ -142,8 +122,8 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <ScrollReveal delay={0.1}>
-                <div className="p-8 border border-purple-500/20 rounded-sm hover:border-purple-400/40 hover:bg-purple-500/5 transition-all duration-300 group">
-                  <Code className="size-8 mb-4 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                <div className="p-8 border border-border rounded-sm hover:border-foreground/20 transition-colors group">
+                  <Code className="size-8 mb-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                   <h3 className="text-xl font-light mb-2">Frontend Development</h3>
                   <p className="text-muted-foreground font-light text-sm">
                     Building responsive, performant web applications using HTML, CSS, JavaScript, and React.
@@ -152,8 +132,8 @@ export default function Home() {
               </ScrollReveal>
               
               <ScrollReveal delay={0.2}>
-                <div className="p-8 border border-purple-500/20 rounded-sm hover:border-purple-400/40 hover:bg-purple-500/5 transition-all duration-300 group">
-                  <Palette className="size-8 mb-4 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                <div className="p-8 border border-border rounded-sm hover:border-foreground/20 transition-colors group">
+                  <Palette className="size-8 mb-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                   <h3 className="text-xl font-light mb-2">UI/UX Design</h3>
                   <p className="text-muted-foreground font-light text-sm">
                     Creating intuitive interfaces with focus on usability, navigation design, and user experience.
@@ -162,8 +142,8 @@ export default function Home() {
               </ScrollReveal>
               
               <ScrollReveal delay={0.3}>
-                <div className="p-8 border border-purple-500/20 rounded-sm hover:border-purple-400/40 hover:bg-purple-500/5 transition-all duration-300 group">
-                  <Smartphone className="size-8 mb-4 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                <div className="p-8 border border-border rounded-sm hover:border-foreground/20 transition-colors group">
+                  <Smartphone className="size-8 mb-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                   <h3 className="text-xl font-light mb-2">Responsive Design</h3>
                   <p className="text-muted-foreground font-light text-sm">
                     Ensuring seamless experiences across all devices with mobile-first approach.
