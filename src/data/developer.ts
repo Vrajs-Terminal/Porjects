@@ -39,7 +39,7 @@ I believe in creating interfaces that feel intuitive and accessible to all users
   availability: 'Open to internships and professional opportunities aligned with organization',
   socialLinks: {
     linkedin: 'https://linkedin.com/in/vraj-amin',
-    github: 'https://github.com/vraj-amin',
+    github: 'https://github.com/Vrajs-Terminal/Porjects.git',
     portfolio: 'https://vraj-amin.dev'
   },
   // Developer profile image - placeholder
