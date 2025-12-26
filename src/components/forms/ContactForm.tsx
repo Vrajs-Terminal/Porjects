@@ -180,7 +180,7 @@ export function ContactForm() {
           control={form.control}
           name="projectType"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="relative z-10">
               <FormLabel className="text-sm font-light tracking-wide">
                 Project Type
               </FormLabel>
@@ -190,14 +190,14 @@ export function ContactForm() {
                     <SelectValue placeholder="Select project type" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent className="bg-popover z-50">
-                  <SelectItem value="editorial" className="font-light">
+                <SelectContent>
+                  <SelectItem value="editorial" className="font-light cursor-pointer">
                     Editorial
                   </SelectItem>
-                  <SelectItem value="commercial" className="font-light">
+                  <SelectItem value="commercial" className="font-light cursor-pointer">
                     Commercial
                   </SelectItem>
-                  <SelectItem value="personal" className="font-light">
+                  <SelectItem value="personal" className="font-light cursor-pointer">
                     Personal
                   </SelectItem>
                 </SelectContent>
